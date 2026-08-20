@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Help</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top bar -->
+<header class="topbar">
+  <span class="brandmark">Good Help</span>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Side admin drawer -->
+<nav class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+  <ul class="drawer-links">
+    <li><a href="#about">About us</a></li>
+    <li><a href="#team">Our people</a></li>
+    <li><a href="#contact">Contact us</a></li>
+    <li><button class="drawer-admin-btn" id="openAdmin">Admin login</button></li>
+  </ul>
+</nav>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- HERO with crossfade backgrounds -->
+<section class="hero" id="hero">
+  <div class="bg-layer bg-a" style="background-image:url('images/bg-1.jpg')"></div>
+  <div class="bg-layer bg-b" style="background-image:url('images/bg-2.jpg')"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <p class="eyebrow">A community that shows up</p>
+    <h1 class="brand-title">Good Help</h1>
+    <p class="hero-sub">Placeholder line — replace with your organization's short mission statement. Keep it to one sentence people will remember.</p>
+    <a href="#about" class="scroll-cue">Scroll to learn more ↓</a>
+  </div>
+</section>
+
+<!-- ABOUT / passport card section -->
+<section class="intro" id="about">
+  <div class="intro-inner">
+    <div class="passport-card">
+      <div class="passport-photo">
+        <img src="images/portrait-1.jpg" alt="Portrait" id="passportImg">
+      </div>
+      <span class="passport-label">ID · GOOD HELP</span>
+    </div>
+    <div class="intro-text">
+      <span class="section-eyebrow">01 — About us</span>
+      <p id="aboutText">This is placeholder text about who you are and what you do. Replace it with your organization's real story — how it started, who it serves, and what changed because of your work. Keep it to about four or five short lines so it stays easy to read on a phone. You can edit this from the admin panel once you're logged in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM / people section (admin-managed) -->
+<section class="team" id="team">
+  <span class="section-eyebrow center">02 — Our people</span>
+  <h2 class="section-title center">The people behind it</h2>
+  <div class="team-grid" id="teamGrid">
+    <!-- person cards injected by JS -->
+  </div>
+  <p class="team-empty" id="teamEmpty">No one has been added yet. Log in as admin to add the first person.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <span class="section-eyebrow center">03 — Contact us</span>
+  <p id="contactText">Placeholder contact text. Add your address, working hours, or how people should reach out for help or to volunteer.</p>
+</section>
+
+<!-- FOOTER with social icons -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="brandmark small">Good Help</span>
+    <div class="social-row">
+      <a href="#" class="social-icon" id="fbLink" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.66 0-3 1.34-3 3v2H9v3h2v7h3v-7h3l1-3h-4V9c0-.55.45-1 1-1z"/></svg>
+      </a>
+      <a href="#" class="social-icon" id="waLink" aria-label="WhatsApp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20.5 3.5A10.9 10.9 0 0 0 12 0C6 0 1.1 4.9 1.1 11c0 1.9.5 3.8 1.5 5.4L1 24l7.8-1.6c1.5.8 3.3 1.2 5.2 1.2 6 0 10.9-4.9 10.9-11 0-3-1.2-5.7-3.4-7.9zM12 21.3c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.6.7.7-3.5-.2-.4A9.1 9.1 0 0 1 2.9 11C2.9 5.9 7 1.9 12 1.9c2.4 0 4.7.9 6.4 2.6a9 9 0 0 1 2.7 6.4c0 5.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 3 4.7 4.1.7.3 1.2.4 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
+      </a>
+      <a href="mailto:info@example.com" class="social-icon" id="emailLink" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.4l8 5.6 8-5.6V6H4zm16 2.3-7.4 5.2a1 1 0 0 1-1.2 0L4 8.3V18h16V8.3z"/></svg>
+      </a>
+      <a href="#" class="social-icon" id="igLink" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .2 2.5.4.6.2 1 .5 1.5 1 .4.4.7.9 1 1.5.2.4.3 1.2.4 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 2-.4 2.5-.2.6-.5 1-1 1.5-.4.4-.9.7-1.5 1-.4.2-1.2.3-2.5.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.2-2.5-.4-.6-.2-1-.5-1.5-1-.4-.4-.7-.9-1-1.5-.2-.4-.3-1.2-.4-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-2 .4-2.5.2-.6.5-1 1-1.5.4-.4.9-.7 1.5-1 .4-.2 1.2-.3 2.5-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.6.2-2 .3-.5.2-.8.4-1.2.7-.3.4-.5.7-.7 1.2-.1.4-.3 1-.3 2C3 9.5 3 9.9 3 13c0 3.1 0 3.5.1 4.7.1 1 .2 1.6.3 2 .2.5.4.8.7 1.2.4.3.7.5 1.2.7.4.1 1 .3 2 .3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.6-.2 2-.3.5-.2.8-.4 1.2-.7.3-.4.5-.7.7-1.2.1-.4.3-1 .3-2 .1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.6-.3-2-.2-.5-.4-.8-.7-1.2-.4-.3-.7-.5-1.2-.7-.4-.1-1-.3-2-.3-1.2-.1-1.6-.1-4.7-.1zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm5.2-2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+      </a>
+    </div>
+    <p class="footer-note">© 2026 Good Help. Edit these links from the admin panel.</p>
+  </div>
+</footer>
+
+<!-- ADMIN MODAL: login -->
+<div class="modal-overlay" id="adminOverlay">
+  <div class="modal login-modal">
+    <button class="modal-close" id="closeLogin">&times;</button>
+    <h3>Admin login</h3>
+    <p class="modal-hint">Enter the admin password to edit this page.</p>
+    <input type="password" id="adminPass" placeholder="Password" autocomplete="off">
+    <p class="login-error" id="loginError">Incorrect password. Try again.</p>
+    <button class="btn-primary" id="submitLogin">Log in</button>
+  </div>
+</div>
+
+<!-- ADMIN MODAL: panel -->
+<div class="modal-overlay" id="panelOverlay">
+  <div class="modal admin-panel">
+    <button class="modal-close" id="closePanel">&times;</button>
+    <h3>Admin panel</h3>
+    <div class="admin-tabs">
+      <button class="tab-btn active" data-tab="person">Add person</button>
+      <button class="tab-btn" data-tab="about">About us</button>
+      <button class="tab-btn" data-tab="contact">Contact us</button>
+      <button class="tab-btn" data-tab="links">Social links</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-person">
+      <label>Name</label>
+      <input type="text" id="personName" placeholder="Full name">
+      <label>Role</label>
+      <input type="text" id="personRole" placeholder="e.g. Volunteer coordinator">
+      <label>Short bio (4–5 lines)</label>
+      <textarea id="personBio" rows="4" placeholder="Write a short bio..."></textarea>
+      <label>Photo URL (path in your images folder)</label>
+      <input type="text" id="personPhoto" placeholder="images/person-name.jpg">
+      <button class="btn-primary" id="addPersonBtn">Add person</button>
+      <div class="existing-list" id="personList"></div>
+    </div>
+
+    <div class="tab-panel" id="tab-about">
+      <label>About us text</label>
+      <textarea id="aboutEdit" rows="6"></textarea>
+      <button class="btn-primary" id="saveAboutBtn">Save about us</button>
+    </div>
+
+    <div class="tab-panel" id="tab-contact">
+      <label>Contact us text</label>
+      <textarea id="contactEdit" rows="6"></textarea>
+      <button class="btn-primary" id="saveContactBtn">Save contact us</button>
+    </div>
+
+    <div class="tab-panel" id="tab-links">
+      <label>Facebook URL</label>
+      <input type="text" id="fbEdit" placeholder="https://facebook.com/...">
+      <label>WhatsApp link</label>
+      <input type="text" id="waEdit" placeholder="https://wa.me/9665xxxxxxxx">
+      <label>Email address</label>
+      <input type="text" id="emailEdit" placeholder="info@example.com">
+      <label>Instagram URL</label>
+      <input type="text" id="igEdit" placeholder="https://instagram.com/...">
+      <button class="btn-primary" id="saveLinksBtn">Save links</button>
+    </div>
+
+    <button class="btn-logout" id="logoutBtn">Log out</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
